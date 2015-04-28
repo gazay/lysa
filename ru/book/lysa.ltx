@@ -26,9 +26,10 @@
 \usepackage{centernot}
 \usepackage[mathcal,mathscr]{euscript}
 \usepackage[answerdelayed]{exercise}
-\usepackage[T1]{fontenc}
-\usepackage{graphics}
+\usepackage[T2A,T1]{fontenc}
 \usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{graphics}
 \usepackage{listings}
 \usepackage{mathtools}
 \usepackage{relsize}
@@ -42,6 +43,42 @@
 \usepackage{xkeyval}
 \usepackage[hidelinks]{hyperref}
 \usepackage{cleveref}
+
+%
+% hyperref and appendix problem 
+%
+% Make appendix and hyperref packages work together with cyrillic (non ASCII) 
+% http://tex.stackexchange.com/questions/41649/how-to-make-appendix-and-hyperref-packages-work-together-with-cyrillic-non-asci
+%
+\renewcommand{\appendixtocname}{Приложения}
+\renewcommand{\appendixpagename}{Приложения}
+\renewcommand{\appendixname}{Приложние}
+\makeatletter
+\let\oriAlph\Alph
+\let\orialph\alph
+\renewcommand{\@resets@pp}{\par
+  \@ppsavesec
+  \stepcounter{@pps}
+  \setcounter{section}{0}%
+  \if@chapter@pp
+    \setcounter{chapter}{0}%
+    \renewcommand\@chapapp{\appendixname}%
+    \renewcommand\thechapter{\@Alph\c@chapter}%
+  \else
+    \setcounter{subsection}{0}%
+    \renewcommand\thesection{\@Alph\c@section}%
+  \fi
+  \if@pphyper
+    \if@chapter@pp
+      \renewcommand{\theHchapter}{\theH@pps.\oriAlph{chapter}}%
+    \else
+      \renewcommand{\theHsection}{\theH@pps.\oriAlph{section}}%
+    \fi
+    \def\Hy@chapapp{appendix}%
+  \fi
+  \restoreapp
+}
+\makeatother
 
 \crefname{chapter}{\S}{\S}
 \crefname{section}{\S}{\S}
@@ -104,11 +141,11 @@
 \newcommand{\link}[2]{#2 (\btrurl{#1})}
 
 % Section & Chapter he
-\newcommand{\ch}[1]{\chapter{#1}\label{ch: #1}}
-\newcommand{\s}[1]{\section{#1}\label{s: #1}}
-\renewcommand{\ss}[1]{\subsection{#1}\label{ss: #1}}
-\newcommand{\sss}[1]{\subsubsection{#1}\label{sss: #1}}
-\newcommand{\pg}[2]{\paragraph{#1}\label{pg: #1}}
+\renewcommand{\ch}[1]{\chapter{#1}}
+\newcommand{\s}[1]{\section{#1}}
+\renewcommand{\ss}[1]{\subsection{#1}}
+\newcommand{\sss}[1]{\subsubsection{#1}}
+\newcommand{\pg}[2]{\paragraph{#1}}
 
 % Math shortcuts
 \newcommand{\N}{\mathbb{N}}
@@ -191,7 +228,7 @@
 \newcommand{\pharpend}{\anauthor{Peter Harpending}{peter@harpending.org}}
 \let\xti\textit %italicize
 \let\xtb\textbf %boldface
-\newcommand{\code}[1]{{\footnotesize\ttfamily #1}}
+\newcommand{\code}[1]{\footnotesize\ttfamily #1}
 \let\crappycode\code %boldface
 \let\terminal\code
 \let\term\xti
@@ -255,7 +292,7 @@
 \let\intersect\cap
 \newcommand{\ce}{:=}
 \newcommand{\termref}[2]{\term{#1} (\cref{#2})}
-\newcommand{\C}{\mathbb{C}}
+\renewcommand{\C}{\mathbb{C}}
 \let\of\circ
 \newcommand{\mtb}[1]{$\mathbf{#1}$}
 \let\st\semic
