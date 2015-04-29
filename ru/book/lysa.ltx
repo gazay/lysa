@@ -1,4 +1,4 @@
-\documentclass[12pt]{book}
+\documentclass[a4paper,12pt,final]{book}
 
 % Append yourself to this list. Aliases are fine (e.g. darkf), but please do
 % include an email where people can email you. If applicable, also include your
@@ -43,6 +43,16 @@
 \usepackage{xkeyval}
 \usepackage[hidelinks]{hyperref}
 \usepackage{cleveref}
+
+% Use AMS Euler fonts for math.
+\usepackage{euler}
+
+% Use PSCyr fonts for text.
+\usepackage{pscyr}
+
+% Make the first line of all sections etc., be indented by the usual
+% paragraph indentation. (For russian typography).
+\usepackage{indentfirst}
 
 %
 % hyperref and appendix problem 
@@ -228,14 +238,14 @@
 \newcommand{\pharpend}{\anauthor{Peter Harpending}{peter@harpending.org}}
 \let\xti\textit %italicize
 \let\xtb\textbf %boldface
-\newcommand{\code}[1]{\footnotesize\ttfamily #1}
+\newcommand{\code}[1]{\texttt{\footnotesize #1}}
 \let\crappycode\code %boldface
 \let\terminal\code
 \let\term\xti
 \let\xtv\code
 \let\tilde\textasciitilde
 \let\mvec\mlist
-\setlength{\parskip}{2ex}
+\setlength{\parskip}{0em}
 \newenvironment{ExcList}
 {
   % \newpage
@@ -329,6 +339,14 @@
   {\begin{quote}}
   {\end{quote}}
 
+% Quotes
+% --------------------------------------
+
+% French quotation
+\newcommand{\q}[1]{\guillemotleft #1\guillemotright}
+
+% German quotation
+\newcommand{\qg}[1]{\glqq #1\grqq}
 
 % ASIDE BOX, stolen from https://github.com/jambonrose/latex-code-example/blob/master/0_preamble.tex
 % 
@@ -337,24 +355,24 @@
 \usepackage[framemethod=TikZ]{mdframed}
 \definecolor{light-gray}{gray}{0.85}
 \newmdenv[ %
-		usetwoside=false,%
-    font=\footnotesize\it,
-		nobreak=false,%
-		roundcorner=0pt,%
-		outerlinewidth=0.2pt,%
-		linecolor=lightgray,%
-		skipabove=12pt,%
-		skipbelow=12pt,%
-		% topmargin=24pt,%
-		% bottommargin=24pt,%
-		rightmargin=10pt,%
-		leftmargin=10pt,%
-		% innertopmargin=\baselineskip,%
-		% innerbottommargin=\baselineskip,%
-		innerrightmargin=10pt,%
-		innerleftmargin=10pt,%  
-		backgroundcolor=light-gray,%
-		]{asidebox}
+  usetwoside=false,%
+  font=\footnotesize\it,
+  nobreak=false,%
+  roundcorner=0pt,%
+  outerlinewidth=0.2pt,%
+  linecolor=lightgray,%
+  skipabove=12pt,%
+  skipbelow=12pt,%
+  % topmargin=24pt,%
+  % bottommargin=24pt,%
+  rightmargin=10pt,%
+  leftmargin=10pt,%
+  % innertopmargin=\baselineskip,%
+  % innerbottommargin=\baselineskip,%
+  innerrightmargin=10pt,%
+  innerleftmargin=10pt,%  
+  backgroundcolor=light-gray,%
+  ]{asidebox}
 
 % End of ASIDE BOX
 
