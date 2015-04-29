@@ -1,4 +1,4 @@
-\ch{More stuff about sets (and functions)}
+\chapter{More stuff about sets (and functions)}
 \label{ch:more-sets}
 
 By now, you hopefully have some idea into the basic intuition behind sets and
@@ -45,7 +45,7 @@ Here's an infix operator:
 
 We're going to look at some more stuff with sets.
 
-\s{Set subtraction}
+\section{Set subtraction}
 
 First off, we have ``set subtraction''. This is sometimes called the ``relative
 complement''.
@@ -75,7 +75,7 @@ no elements satisfying this condition, thus $P \bs P \equiv \nil$.
 
 \Cref{fig:setminus} explains this idea graphically.
 
-\ss{Complement}
+\subsection{Complement}
 
 If $P \subof \amb$, then $\amb \setminus P$ is called the ``\term{complement} of
 $P$ with respect to $\amb$''. Yes, that's compl\xti{e}ment with an 'e', not
@@ -109,7 +109,7 @@ In these exercises, you are going to prove every identity there is about sets.
   \Exercise{\nm{\parens{A \union B}^c \equiv A^c \cap B^c}}
 \end{ExcList}
 
-\s{Cartesian products}
+\section{Cartesian products}
 
 The next thing we need to go over is a \term{Cartesian product} - it's basically
 a way to double up on a set. So, say we have a set $A$, and another set $B$, the
@@ -295,7 +295,7 @@ product of a set with itself?
 The Cartesian product of a set $A$ with itself is usually denoted $A^2$ instead
 of $A \times A$. Like I said, we like to be lazy.
 
-\s{Function plots}
+\section{Function plots}
 
 Okay, so, here's something that doesn't really fit in anywhere else. Now that
 you know what Cartesian products are, as well as vectors, I can introduce you to
@@ -342,7 +342,7 @@ line. Let's start with $8$. Find $8$ on the $x$-axis, then go up from there
 until you get to the line. If you look, the vertical coordinate of the line at
 that point is $64$, which is the square of $8$. That's kind of cool.
 
-\s{The work of Georg Cantor}
+\section{The work of Georg Cantor}
 
 Without further ado, we're going to look at Georg Cantor's work. Georg Cantor,
 if you remember from \cref{ch:sets}, is the guy who first studied sets. He came
@@ -457,7 +457,7 @@ The cardinality of $\N$ (and also $\Z$) is called $\alnull$, pronounced
   \reflectbox{\rotatebox[origin=c]{180}{$\aleph$}}
   upside-down.\cite{w-aleph-null} What a bunch of idiots.}
 
-\ss{The cardinality of irrational numbers}
+\subsection{The cardinality of irrational numbers}
 
 What about $\I$? $\I$ is seemingly more infinite than $\N$. $\N$ and $\Z$ are
 discrete sets: it's pretty easy to enumerate through them. $\I$ is continuous
@@ -605,7 +605,7 @@ Because $\R \supof \I$, it's not possible that $\R$ is countably
 infinite. There's a part of $\R$ that you can't count, so you can't count all of
 $\R$. Pretty simple:
 
-\ss{Rational numbers}
+\subsection{Rational numbers}
 
 Here's where it gets interesting. If you remember, $\Q$, the rational numbers,
 is all numbers that can be written as a ratio of $\frac{x}{y}$, where
@@ -652,7 +652,7 @@ Maybe let's try that with this:
 
 Hey! That works. If we keep going, we'll enumerate through $\Q$! So $\Q \ae \N$!
 
-\s{Okay, that's great. What the hell is that function?}
+\section{Okay, that's great. What the hell is that function?}
 
 Well, to be honest, I'm not sure. I wrote the script to generate the graph by
 doing some very shoddy programming, but I don't know the associated
@@ -674,7 +674,7 @@ First of all, we start at the coordinate $\mvec{0,1}$. So we can write
   \eva{r}{0} \ce \mvec{0,1}
 \end{displaymath}
 
-\s{Conclusion}
+\section{Conclusion}
 
 These are the bizarre results Cantor found, which his colleagues refused to
 believe.

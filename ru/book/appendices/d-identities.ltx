@@ -1,11 +1,11 @@
-\ch{Identities, theorems, and the like}\label{appendix-d}
+\chapter{Identities, theorems, and the like}\label{appendix-d}
 
 This appendix just lists identities, theorems, and stuff like that. It's for
 reference, not for reading.
 
-\s{Equality}\label{d-equality}
+\section{Equality}\label{d-equality}
 
-\ss{Properties}
+\subsection{Properties}
 
 \begin{description}
   \item[Reflexive property] $a \equiv a$
@@ -13,7 +13,7 @@ reference, not for reading.
   \item[Transitive property] $\parens{a = b} \land \parens{b = c} \implies \parens{a = c} \sfall a,b,c$
 \end{description}
 
-\ss{Notation}
+\subsection{Notation}
 
 \begin{description}
 \item[\mtb{a = b}] means that $a$ and $b$ are the same thing.
@@ -23,7 +23,7 @@ reference, not for reading.
   this is the same as $\equiv$, but is semantically different.
 \end{description}
 
-\s{Implications}\label{d-implications}
+\section{Implications}\label{d-implications}
 
 \begin{description}
   \item[Reflexive property] $a \implies a \sfall a$
@@ -31,7 +31,7 @@ reference, not for reading.
   \item[Negation] $\parens{a \implies b} \iff \parens{\lnot a \impliedby \lnot b} \sfall a,b$
 \end{description}
 
-\s{Booleans}\label{d-booleans}
+\section{Booleans}\label{d-booleans}
 
 \nocite{w-boolean-algebra}
 
@@ -53,7 +53,7 @@ reference, not for reading.
   study them to any extent.
 \end{description}
 
-\ss{Logical-and}\label{d-booleans-land}
+\subsection{Logical-and}\label{d-booleans-land}
 
 \begin{description}
   \item[Reflexive property] $a \land a \equiv a$
@@ -62,7 +62,7 @@ reference, not for reading.
   \item[Distributive property] $a \land \parens{b \lor c} \equiv \parens{a \land b} \lor \parens{b \land c}$
 \end{description}
 
-\ss{Logical-or}\label{d-booleans-lor}
+\subsection{Logical-or}\label{d-booleans-lor}
 
 \begin{description}
   \item[Reflexive property] $a \lor a \equiv a$
@@ -107,7 +107,7 @@ reference, not for reading.
 
 \end{description}
 
-\ss{De Morgan's Laws}\label{d-booleans-demorgan}
+\subsection{De Morgan's Laws}\label{d-booleans-demorgan}
 
 \begin{description}
   \item[De Morgan's first law] $\lnot\parens{a \land b} \equiv \lnot a \lor \lnot b$
@@ -127,9 +127,9 @@ reference, not for reading.
     \end{proof}
 \end{description}
 
-\s{Sets}\label{d-sets}
+\section{Sets}\label{d-sets}
 
-\ss{Definitions}\label{d-set-definitions}
+\subsection{Definitions}\label{d-set-definitions}
 
 \begin{description}
   \item[Unions] $a \cup b \ce \mset{x \in \amb \semic x \in a \lor x \in b}$
@@ -138,9 +138,9 @@ reference, not for reading.
   \item[Complement (sometimes absolute complement)] $a^c \ce \mset{x \in \amb \semic x \notin a}$
 \end{description}
 
-\ss{Identities}\label{d-set-identities}
+\subsection{Identities}\label{d-set-identities}
 
-\sss{Unions}\label{d-unions}
+\subsubsection{Unions}\label{d-unions}
 
 \begin{description}
   \item[Reflexive property] $a \union a \equiv a$
@@ -148,7 +148,7 @@ reference, not for reading.
   \item[Commutative property] $a \union b \equiv b \union a$
 \end{description}
 
-\sss{Intersects}\label{d-interects}
+\subsubsection{Intersects}\label{d-interects}
 
 \begin{description}
   \item[Reflexive property] $a \intersect a \equiv a$
@@ -156,7 +156,7 @@ reference, not for reading.
   \item[Commutative property] $a \intersect b \equiv b \intersect a$
 \end{description}
 
-\sss{Set subtraction identities}\label{d-set-subtraction}
+\subsubsection{Set subtraction identities}\label{d-set-subtraction}
 
 \begin{enumerate}
 \item $\mathbf{A \bs \parens{B \cap C} \equiv \parens{A \bs B} \union \parens{A \bs C}}$
@@ -431,7 +431,7 @@ reference, not for reading.
   \end{proof}
 \end{enumerate}
 
-\sss{Distributive properties}
+\subsubsection{Distributive properties}
 
 \begin{description}
 \item \mtb{A \cap \parens{B \cup C} \equiv \parens{A \cap B} \cup \parens{A \cap C}} 
@@ -514,7 +514,7 @@ reference, not for reading.
   \end{proof}
 \end{description}
 
-\sss{Complements}
+\subsubsection{Complements}
 
 \begin{description}
 \item \mtb{\parens{A^c}^c \equiv A} 
@@ -553,7 +553,7 @@ reference, not for reading.
   \end{proof}
 \end{description}
 
-\ss{ZFC}\label{d-zfc}
+\subsection{ZFC}\label{d-zfc}
 
 \nocite{w-zfc,jech-set-theory}
 
@@ -571,7 +571,7 @@ reference, not for reading.
 \item[ZF] ZFC without the axiom of choice
 \end{description}
 
-% \sss{ZFC Axioms}
+% \subsubsection{ZFC Axioms}
 
 % \begin{description}
 % \item[Axiom of extensionality] Two sets are equal if they have the same elements
@@ -583,9 +583,9 @@ reference, not for reading.
 % \item[Axiom of separation] 
 % \end{description}
 
-\s{Functions}\label{d-functions}
+\section{Functions}\label{d-functions}
 
-\ss{Vocabulary}
+\subsection{Vocabulary}
 
 \begin{description}
 \item[Function] A mathematical construct mapping an input to an output.
@@ -604,7 +604,7 @@ reference, not for reading.
   signature.
 \end{description}
 
-\ss{Notation}
+\subsection{Notation}
 
 \begin{description}
 \item[: notation] $f : A \to B$ means that $f$ takes an item from $A$, and outputs an item
@@ -630,7 +630,7 @@ reference, not for reading.
   \end{alignedmath}
 \end{description}
 
-\s{Lambda calculus}\label{d-lambda-calculus}
+\section{Lambda calculus}\label{d-lambda-calculus}
 
 \nocite{hs-lambda,hs-alpha,hs-beta,hs-eta,hs-lambda-abs}
 
@@ -663,7 +663,7 @@ reference, not for reading.
   \[ \ld{2,\kappa} 2 + \kappa \]
 \end{description}
 
-\s{Greek alphabet}\label{d-greek-alphabet}
+\section{Greek alphabet}\label{d-greek-alphabet}
 
 \nocite{w-greek-alphabet}
 
@@ -695,7 +695,7 @@ reference, not for reading.
   $\Omega, \omega$ & Omega & O, b\xtb{o}ss \\ \hline
 \end{tabu}
 
-\s{Special sets}\label{d-special-sets}
+\section{Special sets}\label{d-special-sets}
 
 Despite my informal notation, these are all sets
 
@@ -708,9 +708,9 @@ Despite my informal notation, these are all sets
 \item $\I = \R \bs \Q$
 \end{description}
 
-\ss{Properties and identities}
+\subsection{Properties and identities}
 
-\sss{Addition}
+\subsubsection{Addition}
 
 \begin{description}
 \item[Additive identity] \nm{a + 0 \equiv 0}
@@ -721,7 +721,7 @@ Despite my informal notation, these are all sets
 \item[Distribution] \nm{\ng{\parens{a + b}} \equiv \ng a + \ng b}
 \end{description}
 
-\sss{Subtraction}
+\subsubsection{Subtraction}
 
 \begin{description}
 \item[Definition] \nm{a - b \ce a + \ng b}
@@ -731,7 +731,7 @@ Despite my informal notation, these are all sets
 \item[Distribution theorem] \nm{a - \parens{b + c} \equiv a - b - c}
 \end{description}
 
-\sss{Multiplication}
+\subsubsection{Multiplication}
 
 \begin{description}
 \item[Multiplicative identity] \nm{a \ntimes 1 \equiv a}
@@ -748,7 +748,7 @@ Despite my informal notation, these are all sets
 \item[Notation] \nm{ab = a\ntimes b} if $a$ and $b$ are two separate things.
 \end{description}
 
-\sss{Division}
+\subsubsection{Division}
 
 \begin{description}
 \item[Divisive identity] \nm{a \div 1 \equiv a}
